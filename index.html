@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venture - YHM Venture Projects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-V9B87Ziv8HqkxgDw4bV1I2P6ckw1+7m+e+4mZ+Moy1UtvFezN1LNN6yRbhK+qR8jS1hcl8Fz56YfVfjYzN4lQA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <!-- Header -->
+<header class="site-header">
+  <div class="header-container">
+    <!-- Logo -->
+    <div class="logo">YMH Ventures</div>
+
+    <!-- Menu Toggle Button (SVG Hamburger) -->
+    <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-container">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="our-ventures.html" class="nav-link">Our Ventures</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      </ul>
+
+      <!-- Search Bar -->
+      <div class="search-container">
+        <input type="text" placeholder="Search..." class="search-input" aria-label="Search input">
+        <button class="search-button" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Script for mobile menu -->
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav-container');
+
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !expanded);
+  });
+</script>
+
+
+
+    <!-- Hero Section -->
+      <section class="hero-slider-section">
+        <div class="hero-slider-track">
+          <div class="hero-slider-item">
+            <img src="images/slider-3.jpg" alt="Startup Business Team Collaboration">
+          </div>
+          <div class="hero-slider-item">
+            <img src="images/slider-5.jpg" alt="Business Growth and Financial Success">
+          </div>
+          <div class="hero-slider-item">
+            <img src="images/slider-4.jpg" alt="Entrepreneurial Startup Workspace">
+          </div>
+          <div class="hero-slider-item">
+            <img src="images/slider-3.jpg" alt="Business Meeting and Strategy Planning">
+          </div>
+          <div class="hero-slider-item">
+            <img src="images/slider-3.jpg" alt="Innovative Startup Concept">
+          </div>
+        </div>
+
+        <div class="hero-slider-content">
+          <h1>CROSSING BOUNDARIES</h1>
+          <p>Bringing communities together</p>
+          <div class="hero-slider-btn-wrap">
+            <a href="contact.html" class="hero-slider-btn">Visit Ventures</a>
+          </div>
+        </div>
+      </section>
+
+      <!--Hero slider JS -->
+        <script>
+        // =========================
+        // Hero Slider
+        // =========================
+        const heroSliderTrack = document.querySelector('.hero-slider-track');
+        const heroSliderItems = document.querySelectorAll('.hero-slider-item');
+
+        if (heroSliderTrack && heroSliderItems.length) {
+          let currentSlide = 0;
+          const totalSlides = heroSliderItems.length;
+
+          // Clone first slide and append to the end for smooth looping
+          const firstClone = heroSliderItems[0].cloneNode(true);
+          heroSliderTrack.appendChild(firstClone);
+
+          function nextSlide() {
+            currentSlide++;
+            heroSliderTrack.style.transition = 'transform 1s ease-in-out';
+            heroSliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            // Reset to first slide when we reach the cloned slide
+            if (currentSlide === totalSlides) {
+              setTimeout(() => {
+                heroSliderTrack.style.transition = 'none';
+                heroSliderTrack.style.transform = 'translateX(0)';
+                currentSlide = 0;
+              }, 1000); // match the transition duration
+            }
+          }
+
+          // Auto slide every 4 seconds
+          setInterval(nextSlide, 4000);
+        }
+
+        </script>
+
+
+    <!-- Ventures Section -->
+<section class="ventures-grid">
+  <h2>Our Ventures</h2>
+  <div class="grid">
+    <a href="vokits-group.html" class="card-link">
+      <div class="card">
+        <img src="images/Vok-ltd-image.jpg" alt="Venture One">
+        <h3>Voktis Group</h3>
+        <p>We provide Top-quality IT solutions for your business. Our services include excellent IT support and management.</p>
+      </div>
+    </a>
+    <a href="">
+      <div href="vokits-group.html" class="card">
+        <img src="images/Vok-Global-image.jpg" alt="Zaarbit">
+        <h3>Zaarbit</h3>
+        <p>Voktis IT is our core business and where it all started. Providing IT Solutions for Education & Business is the heart of our business.</p>
+      </div>
+    </a>
+
+    </a>
+    <div class="card">
+      <img src="images/Vok-academy-image.jpg" alt="Venture Three">
+      <h3>Brightemy</h3>
+      <p>Our business believes in empowering young people and giving them a chance to prosper. With an increasing demand for high level.</p>
+    </div>
+
+    <a href="your-link.html" class="card-link">
+      <div class="card">
+        <img src="images/Vok-unity-image.jpg" alt="Venture Four">
+        <h3>Bridano</h3>
+        <p>In a world of many difficulties, everyone can play a part. Voktis Unity hopes to do just that, and play a small part in making the world.</p>
+      </div>      
+    </a>
+
+    <a href="your-link.html" class="card-link">
+      <div class="card">
+        <img src="images/Vok-Creative-image.jpg" alt="Venture Five">
+        <h3>Cr8 Ease</h3>
+        <p>Voktis Creative aims to help you build your brands presence through Social Media. Designed for Education and Start-up.</p>
+      </div>      
+    </a>
+
+    <a href="your-link.html" class="card-link">
+      <div class="card">
+        <img src="images/Vok-Bangladesh-image.jpg" alt="Venture Six">
+        <h3>Sixteen Foundation</h3>
+        <p>Sixteen Foundation is a Community Organisation run by selfless volunteers. Our vision is to see communities around the world feel... </p>
+      </div>      
+    </a>
+</section>
+
+
+    <!-- Footer -->
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+      <div class="footer-container">
+        <!-- About Us -->
+        <div class="footer-about">
+          <h3>About Us</h3>
+          <p>We are a multi-faceted organisation with multiple ventures, aiming to empower young people as future leaders.</p>
+          <div class="footer-logo">YHM Venture</div>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="footer-links">
+          <h3>Useful Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Website Terms</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Ventures -->
+        <div class="footer-ventures">
+          <h3>Ventures</h3>
+          <ul>
+            <li><a href="#">Voktis Group</a></li>
+            <li><a href="#">Zaarbit</a></li>
+            <li><a href="#">Brightemy</a></li>
+            <li><a href="#">Bridano</a></li>
+            <li><a href="#">Cr8 Ease</a></li>
+            <li><a href="#">Sixteen Foundation</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact + Socials -->
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>
+            Suite 101, Earl Business Centre,<br>
+            Dowry Street, Oldham, OL8 2PF<br>
+            T: 0161 284 1085<br>
+            E: <a href="mailto:info@voktisgroup.com">info@voktisgroup.com</a>
+          </p>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        &copy; 2025 YHM Venture. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+</body>
+</html>

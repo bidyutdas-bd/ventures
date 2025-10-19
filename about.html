@@ -1,0 +1,203 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-V9B87Ziv8HqkxgDw4bV1I2P6ckw1+7m+e+4mZ+Moy1UtvFezN1LNN6yRbhK+qR8jS1hcl8Fz56YfVfjYzN4lQA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+    <div class="header-container">
+        <!-- Logo -->
+        <div class="logo">YMH Ventures</div>
+
+        <!-- Menu Toggle Button (SVG Hamburger) -->
+        <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-container">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link active ">About Us</a></li>
+            <li><a href="our-ventures.html" class="nav-link">Our Ventures</a></li>
+            <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-input" aria-label="Search input">
+            <button class="search-button" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            </button>
+        </div>
+        </nav>
+    </div>
+    </header>
+
+    <!-- Script for mobile menu -->
+    <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-container');
+
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !expanded);
+    });
+    </script>    
+
+      <!-- ================= HERO SECTION ================= -->
+<section class="about-hero">
+  <div class="about-hero-image">
+    <img src="images/slider-2.jpg" alt="About Us">
+  </div>
+  <div class="about-hero-content">
+    <h1>About Us</h1>
+    <p>Inspiring and empowering communities since 2013, we’re dedicated to driving meaningful change and creating lasting impact.</p>
+  </div>
+</section>
+
+
+ <!-- ================= ABOUT CONTENT ================= -->
+<section class="about-section">
+  <div class="about-container">
+
+    <!-- ===== Our Story ===== -->
+    <div class="about-block">
+      <h2>Our Story</h2>
+      <p>
+        Our Story started in 2013, when we started as a small IT company in a small town, with ambitions to change the way technology is delivered in Schools & Businesses. Since then, we have developed into a multi-faceted organisation with multiple ventures, with the aim of empowering and developing young people as future leaders.
+      </p>
+    </div>
+
+    <!-- ===== Values & Plans For The Future ===== -->
+    <div class="about-block values-section">
+      <div class="values-container">
+
+        <!-- Left: Image -->
+        <div class="values-image">
+          <img src="images/values.jpg" alt="Values & Plans For The Future">
+        </div>
+
+        <!-- Right: Text Content -->
+        <div class="values-text">
+          <h2>Our Values & Plans For The Future</h2>
+          <p>We are very ambitious and want to make an impact on the community that has given so much to us.</p>
+
+          <h3>Leaders</h3>
+          <p>
+            There is a lot of talent out there that require the right environment, training and support to become future leaders. With many success stories within our organisation, we aspire to be the go-to place for young people to fulfil their ambitions.
+          </p>
+
+          <h3>Values</h3>
+          <p>
+            Skills can be taught but values are the ones you bring. We are looking for passionate, hard working and enthusiastic individuals to join us on our journey, and create your own story.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Founder Message ===== -->
+<!-- ===== Founder Message ===== -->
+<div class="about-block founder-message">
+  <div class="founder-container">
+    
+    <!-- Left: Text Content -->
+    <div class="founder-text">
+      <h2>Message From The Founder</h2>
+      <p>
+        Coming from an ethnic background has its challenges. Having worked through multiple roles I know the challenges that can be faced. One thing I have felt always shone was true work ethic in an individual, regardless of their background.
+      </p>
+      <p>
+        Our team come from various backgrounds, and they have a single thing that makes it work - hard work. With a determination to be the best at their role, our staff are our case studies.
+      </p>
+      <p>
+        We are where we are because of our staff, and this is something I am very proud of. We would love for you to join us on our journey, whether it is as a customer, a supplier or just a well-wisher, together we are better.
+      </p>
+    </div>
+
+    <!-- Right: Founder Image -->
+    <div class="founder-image">
+      <img src="images/founder.png" alt="Founder Image">
+    </div>
+
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+      <div class="footer-container">
+        <!-- About Us -->
+        <div class="footer-about">
+          <h3>About Us</h3>
+          <p>We are a multi-faceted organisation with multiple ventures, aiming to empower young people as future leaders.</p>
+          <div class="footer-logo">YHM Venture</div>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="footer-links">
+          <h3>Useful Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Website Terms</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Ventures -->
+        <div class="footer-ventures">
+          <h3>Ventures</h3>
+          <ul>
+            <li><a href="#">Voktis Group</a></li>
+            <li><a href="#">Zaarbit</a></li>
+            <li><a href="#">Brightemy</a></li>
+            <li><a href="#">Bridano</a></li>
+            <li><a href="#">Cr8 Ease</a></li>
+            <li><a href="#">Sixteen Foundation</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact + Socials -->
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>
+            Suite 101, Earl Business Centre,<br>
+            Dowry Street, Oldham, OL8 2PF<br>
+            T: 0161 284 1085<br>
+            E: <a href="mailto:info@voktisgroup.com">info@voktisgroup.com</a>
+          </p>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        &copy; 2025 YHM Venture. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
